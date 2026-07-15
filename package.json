@@ -1,0 +1,25 @@
+{
+  "name": "final-tp2-2026-aloisio-alejandro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "node --watch .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/aaloisio86/FINAL-TP2-2026-ALOISIO-ALEJANDRO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaloisio86/FINAL-TP2-2026-ALOISIO-ALEJANDRO/issues"
+  },
+  "homepage": "https://github.com/aaloisio86/FINAL-TP2-2026-ALOISIO-ALEJANDRO#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
