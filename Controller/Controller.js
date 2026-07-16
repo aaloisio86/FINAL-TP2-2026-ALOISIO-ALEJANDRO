@@ -4,16 +4,23 @@ class Controller {
         this.service = service;
     }
 
-    getAll=async (req, res) => {
+    getAll=async (req, res, next) => {
         try {
-            const data = this.service.getAll();
-            res.status(200).send({message:"controller"});
+            const data = await this.service.getAll();
+            res.status(200).json(data);
         } catch (error) {
-            res.status(400).send({message:error.message});  
+            next(error);
         }
+    };
 
-}
-
+    postLectura = async (req, res, next) => {
+        try {
+            const { lectura, esNuevo } = await this.service.recibirLectura(req.body);
+            res.status(esNuevo ? 201 : 200).json(lectura);
+        } catch (error) {
+            next(error);
+        }
+    };
 }
 
 export default Controller;
